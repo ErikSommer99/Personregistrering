@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eriksommer.gui.PrimaryController">
+    <Label layoutX="60.0" layoutY="52.0" text="Personregistrering">
+        <font>
+            <Font size="22.0" />
+        </font>
+    </Label>
+    <Label layoutX="60.0" layoutY="103.0" text="Navn:" />
+    <Label layoutX="60.0" layoutY="139.0" text="Fødselsdato:" />
+    <Label layoutX="59.0" layoutY="176.0" text="Telefonnr:" />
+    <Label layoutX="59.0" layoutY="214.0" text="Epost:" />
+    <TextField fx:id="txtNavn" layoutX="149.0" layoutY="98.0" prefHeight="27.0" prefWidth="186.0" />
+    <TextField fx:id="txtDag" alignment="CENTER" layoutX="149.0" layoutY="134.0" prefHeight="27.0" prefWidth="56.0" />
+    <TextField fx:id="txtManed" alignment="CENTER" layoutX="214.0" layoutY="134.0" prefHeight="27.0" prefWidth="56.0" />
+    <TextField fx:id="txtAr" alignment="CENTER" layoutX="279.0" layoutY="134.0" prefHeight="27.0" prefWidth="56.0" />
+    <TextField fx:id="txtTelefonnr" layoutX="149.0" layoutY="171.0" prefHeight="27.0" prefWidth="186.0" />
+    <TextField fx:id="txtEpost" layoutX="149.0" layoutY="209.0" prefHeight="27.0" prefWidth="186.0" />
+    <Button layoutX="349.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnRegistrer" text="Registrer" />
+    <Button layoutX="349.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnLastFil" prefHeight="27.0" prefWidth="67.0" text="Last fil" />
+    <Button layoutX="349.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnFjernFil" prefHeight="27.0" prefWidth="67.0" text="Fjern fil" />
+    <Label fx:id="lblMelding" layoutX="149.0" layoutY="244.0" prefHeight="35.0" prefWidth="289.0" />
+    <TableView fx:id="tableView" editable="true" layoutX="60.0" layoutY="288.0" prefHeight="288.0" prefWidth="767.0">
+        <columns>
+            <TableColumn fx:id="txtNavnListe" onEditCommit="#editNavn" prefWidth="215.0" text="Navn">
+                <cellValueFactory>
+                    <PropertyValueFactory property="navn" />
+                </cellValueFactory>
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+            <TableColumn fx:id="txtDatoListe" minWidth="0.0" onEditCommit="#editDato" prefWidth="108.0" text="Dato">
+                <cellValueFactory>
+                    <PropertyValueFactory property="dato" />
+                </cellValueFactory>
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+            <TableColumn fx:id="txtAlderListe" minWidth="0.0" onEditStart="#editAlder" prefWidth="52.0" text="Alder">
+            </TableColumn>
+            <TableColumn fx:id="txtTelefonnrListe" minWidth="0.0" onEditCommit="#editTelefonnr" prefWidth="138.0" text="Telefonnr">
+                <cellValueFactory>
+                    <PropertyValueFactory property="telefonnr" />
+                </cellValueFactory>
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+            <TableColumn fx:id="txtEpostListe" minWidth="0.0" onEditCommit="#editEpost" prefWidth="253.0" text="ePost">
+                <cellValueFactory>
+                    <PropertyValueFactory property="epost" />
+                </cellValueFactory>
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn" />
+                </cellFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button layoutX="349.0" layoutY="171.0" mnemonicParsing="false" onAction="#btnLagre" prefHeight="27.0" prefWidth="67.0" text="Lagre fil" />
+    <Separator layoutX="441.0" layoutY="71.0" orientation="VERTICAL" prefHeight="200.0" />
+    <ChoiceBox fx:id="filtrerSokCB" layoutX="531.0" layoutY="126.0" prefHeight="27.0" prefWidth="161.0" />
+    <TextField fx:id="txtSok" layoutX="531.0" layoutY="171.0" />
+    <Button layoutX="653.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnSok" text="Søk" />
+    <Label layoutX="457.0" layoutY="131.0" text="Filtrer etter:" />
+    <Label layoutX="457.0" layoutY="176.0" text="Søkeord:" />
+    <Label fx:id="lblMeldingSok" layoutX="457.0" layoutY="252.0" prefHeight="17.0" prefWidth="267.0" />
+    <Button layoutX="531.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnFjernSok" text="Fjern søk" />
+</AnchorPane>

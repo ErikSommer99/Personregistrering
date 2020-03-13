@@ -1,0 +1,15 @@
+Ole Petter;21;5;1987;87693342;olepetter@online.no
+Line Fagerhøy;3;6;1996;67843234;linefagerhøy96@gmail.com
+Leaner Huuse;17;1;2010;89736463;leandererkul@yahoo.no
+Lise Berntsen;25;7;1999;76834213;lise@berntsen.net
+Peder Lotten Finberg;1;1;1998;89759342;pederlotten98@hotmail.no
+Line Pedersen;4;12;1982;78909232;pedersenline@hotmail.no
+Stine Olsen;8;11;2001;23153259;stineolsen1@gmail.com
+Markus Braadlie;14;3;1999;67832165;markusbraadlie@golf.no
+Helge Ingebritsen;6;6;1966;87603343;helge@inge.no
+Sebastian Dahle;24;12;2000;+4768434123;sebastian@julaften.no
+Helga Bakkemo;3;8;1956;76234676;helgabakkemo@gmail.com
+Emilie Bakken;31;1;1992;98323128;bakken@emilie.net
+Mathias Seter;10;9;1990;87324768;mathiass90@online.no
+Thea Knudsen;3;2;1921;67323187;theaknudsen@hotmail.com
+Erik Storbaken;17;1;1920;64524184;erikstorbaken@ultra.co
